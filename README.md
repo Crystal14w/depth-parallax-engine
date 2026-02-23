@@ -26,6 +26,8 @@ It is not affiliated with, endorsed by, or connected to any commercial products 
 ## Image Example
 
 ## 🏗 Architecture
+
+
                        ┌────────────┐   POST /process   ┌────────────┐
 User  ── upload img ──►│ React UI   │───────────────────►│ FastAPI    │
                        └────────────┘                   │  backend   │
