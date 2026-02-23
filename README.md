@@ -26,7 +26,7 @@ It is not affiliated with, endorsed by, or connected to any commercial products 
 ![image alt](https://github.com/Crystal14w/depth-parallax-engine/blob/4b1aa79fdd83dd0c6cab5cba43ec3e4bd23a6028/Images/Page_2_Vertical.PNG)
 
 ## 3D Image Video Example
-[[![Click to play](Images/demo-thumb.gif)](https://raw.githubusercontent.com/Crystal14w/depth-parallax-engine/9b0de679601afcf004ccc911a9bffd3b576122d7/Images/demo.mp4)](https://raw.githubusercontent.com/Crystal14w/depth-parallax-engine/9b0de679601afcf004ccc911a9bffd3b576122d7/Images/demo.mp4)
+[(Images/demo-thumb.gif)](https://raw.githubusercontent.com/Crystal14w/depth-parallax-engine/9b0de679601afcf004ccc911a9bffd3b576122d7/Images/demo.mp4)](https://raw.githubusercontent.com/Crystal14w/depth-parallax-engine/9b0de679601afcf004ccc911a9bffd3b576122d7/Images/demo.mp4)
 
 
 ## 1.) 🏗 Architecture
