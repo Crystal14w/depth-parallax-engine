@@ -78,7 +78,7 @@ npm run dev
 
 Tip: Control + C to exit running application
 
-# Try it
+##### Run it
 1.) Open the frontend.
 2.) Select an image (JPEG/PNG).
 3.) Adjust Focal X / Focal Y (%, 0 = left/top, 100 = right/bottom).
