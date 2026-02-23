@@ -57,7 +57,7 @@ React frontend
 ## 3.) ⚙️ Backend setup
 cd backend
 python -m venv .venv
-# Windows: .venv\Scripts\activate
+#### Windows: .venv\Scripts\activate
 source .venv/bin/activate
 pip install -r requirements.txt
 uvicorn main:app --reload --port 8000
