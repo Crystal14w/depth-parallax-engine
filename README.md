@@ -11,6 +11,9 @@ This project demonstrates how monocular depth estimation can be used to generate
 * Customizable motion parameters
 * React + TypeScript frontend
 * FastAPI backend
+* DeepLab V3 + Canny semantic & edge masks for crisp furniture outlines
+* Focal‑point stabilisation (focalX, focalY, 0‑100 %)
+* Exports MP4 (H.264, 24 fps) or GIF
 
 ## Disclaimer
 
