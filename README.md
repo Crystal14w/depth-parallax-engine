@@ -3,7 +3,7 @@ An experimental depth-based parallax motion generator built with FastAPI, PyTorc
 
 This project demonstrates how monocular depth estimation can be used to generate cinematic motion effects from a single image.
 
-## Features
+## ✨Features
 
 * Monocular depth estimation (MiDaS-based)
 * Depth-weighted displacement rendering
@@ -19,3 +19,96 @@ This project demonstrates how monocular depth estimation can be used to generate
 
 This project is an independent educational implementation of depth-based motion rendering techniques.
 It is not affiliated with, endorsed by, or connected to any commercial products or companies.
+
+##Example of UI
+
+
+##Image Example
+
+##🏗 Architecture
+                       ┌────────────┐   POST /process   ┌────────────┐
+User  ── upload img ──►│ React UI   │───────────────────►│ FastAPI    │
+                       └────────────┘                   │  backend   │
+                            ▲  MP4/GIF ◄───────────────┘            
+                            └──── preview ───────────────────────────┘
+Layer	Stack	What happens
+Backend	FastAPI • PyTorch • OpenCV • scikit‑image	1) Estimate depth with MiDaS.2) Segment foreground via DeepLab V3.3) Refine mask with Canny → dilation.4) Stabilise around focal point.5) Render parallax frames & encode.
+Frontend	React • Vite • TypeScript • Tailwind	Upload form → progress indicator → HTML5 video / GIF preview + download link.
+
+##🚀 Quick Start
+#1 • Clone & split dirs
+
+git clone https://github.com/crystal14w/depth-parallax-engine.git
+cd depth-parallax-engine
+
+backend/   # FastAPI + ML
+client/    # React frontend
+
+#2 • Backend setup
+cd backend
+python -m venv .venv
+# Windows: .venv\Scripts\activate
+source .venv/bin/activate
+pip install -r requirements.txt
+uvicorn main:app --reload --port 8000
+
+requirements.txt
+fastapi==0.110.*
+uvicorn[standard]==0.29.*
+opencv-python==4.9.*
+torch==2.3.*
+torchvision==0.18.*
+scikit-image==0.23.*
+imageio[ffmpeg]==2.34.*
+
+#3 • Frontend setup
+cd ../client
+npm install
+npm run dev  
+
+Tip: Control + C to exit running application
+
+#4 • Try it
+1.) Open the frontend.
+2.) Select an image (JPEG/PNG).
+3.) Adjust Focal X / Focal Y (%, 0 = left/top, 100 = right/bottom).
+5.) Click Generate → watch the preview, then download.
+
+##🛠 API reference (POST /process)
+Field	Type	Range/Options	Default	Description
+file	binary	JPEG, PNG	—	Source image
+depthStrength	int	0‑100	60	How strongly foreground & background diverge
+parallax	int	0‑100	60	Lateral camera sway
+focalX / focalY	int	0‑100	50	Pivot that remains most stable
+loopSeconds	int	1‑30	15	Clip duration (24 fps)
+motionType	str	horizontal | vertical | diagonal | circle	horizontal	Path shape
+format	str	MP4 | GIF	MP4	Output container
+
+Response JSON
+{
+  "ok": true,
+  "video": "/result/ab12cd34?fmt=mp4"
+}
+
+Fetch example (React, axios):
+const res = await axios.post("http://127.0.0.1:8000/process", formData, {
+  headers: { "Content-Type": "multipart/form-data" },
+  responseType: "json",
+});
+
+
+Paste in Browser:
+http://127.0.0.1:8000/result/ab12cd34?fmt=mp4
+
+##📦 Production build
+npm run build
+
+
+
+
+
+
+
+
+
+
