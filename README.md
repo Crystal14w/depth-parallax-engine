@@ -26,6 +26,22 @@ It is not affiliated with, endorsed by, or connected to any commercial products 
 ## Image Example
 
 ## 1.) 🏗 Architecture
+## 🏗️ Architecture
+```text
+User -- upload img --> | React UI | -----------------------------> | FastAPI |
+                       | backend  | ◀︎ MP4/GIF                    |
+                       └─ preview ------------------------------▶ HTML5 player
+Layer stack
+  Backend  FastAPI • PyTorch • OpenCV • scikit-image
+           1) MiDaS depth  2) DeepLab V3 seg  3) Canny refine
+           4) Focal-point stabilise   5) Render & encode
+  Frontend React • Vite • TypeScript • Tailwind
+           Upload form → progress bar → preview + download link
+
+
+
+
+
 
 
                        ┌────────────┐   POST /process   ┌────────────┐
