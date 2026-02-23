@@ -39,15 +39,14 @@ Frontend	React • Vite • TypeScript • Tailwind	Upload form → progress ind
 
 ## 🚀 Quick Start
 # 1 • Clone & split dirs
-
 git clone https://github.com/crystal14w/depth-parallax-engine.git
 cd depth-parallax-engine
 
-backend/   
-# FastAPI + ML
+##### Backend  
+FastAPI + ML
 
-client/   
-# React frontend
+##### Client   
+React frontend
 
 # 2 • Backend setup
 cd backend
@@ -80,16 +79,8 @@ Tip: Control + C to exit running application
 5.) Click Generate → watch the preview, then download.
 
 ## 🛠 API reference (POST /process)
-Field	Type	Range/Options	Default	Description
-file	binary	JPEG, PNG	—	Source image
-depthStrength	int	0‑100	60	How strongly foreground & background diverge
-parallax	int	0‑100	60	Lateral camera sway
-focalX / focalY	int	0‑100	50	Pivot that remains most stable
-loopSeconds	int	1‑30	15	Clip duration (24 fps)
-motionType	str	horizontal | vertical | diagonal | circle	horizontal	Path shape
-format	str	MP4 | GIF	MP4	Output container
 
-Response JSON
+#### Response JSON
 {
   "ok": true,
   "video": "/result/ab12cd34?fmt=mp4"
@@ -102,10 +93,10 @@ const res = await axios.post("http://127.0.0.1:8000/process", formData, {
 });
 
 
-Paste in Browser:
+#### Paste in Browser:
 http://127.0.0.1:8000/result/ab12cd34?fmt=mp4
 
-##📦 Production build
+## 📦 Production build
 npm run build
 
 
