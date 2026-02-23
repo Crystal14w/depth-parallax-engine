@@ -38,7 +38,8 @@ Backend	FastAPI • PyTorch • OpenCV • scikit‑image	1) Estimate depth with
 Frontend	React • Vite • TypeScript • Tailwind	Upload form → progress indicator → HTML5 video / GIF preview + download link.
 
 ## 2.) 🚀 Quick Start
-# 1 • Clone & split dirs
+
+##### Termial
 git clone https://github.com/crystal14w/depth-parallax-engine.git
 cd depth-parallax-engine
 
@@ -48,7 +49,7 @@ FastAPI + ML
 ##### Client   
 React frontend
 
-## 3.) Backend setup
+## 3.) ⚙️ Backend setup
 cd backend
 python -m venv .venv
 # Windows: .venv\Scripts\activate
@@ -65,7 +66,7 @@ torchvision==0.18.*
 scikit-image==0.23.*
 imageio[ffmpeg]==2.34.*
 
-## 4.) Frontend setup
+## 4.) 🖥️ Frontend setup
 cd ../client
 npm install
 npm run dev  
