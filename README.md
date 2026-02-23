@@ -29,8 +29,8 @@ It is not affiliated with, endorsed by, or connected to any commercial products 
 
 ```
                        ┌────────────┐   POST /process   ┌────────────┐
-User  ── upload img ──►│ React UI   │───────────────────►│ FastAPI    │
-                       └────────────┘                   │  backend   │
+User  ── upload img ──►│ React UI   │───────────────────►│ FastAPI   │
+                       └────────────┘                    ____________
                             ▲  MP4/GIF ◄───────────────┘            
                             └──── preview ───────────────────────────┘
 Layer stack
