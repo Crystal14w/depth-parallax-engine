@@ -21,7 +21,9 @@ This project is an independent educational implementation of depth-based motion 
 It is not affiliated with, endorsed by, or connected to any commercial products or companies.
 
 ## Example of UI
+![image alt](https://github.com/Crystal14w/depth-parallax-engine/blob/4b1aa79fdd83dd0c6cab5cba43ec3e4bd23a6028/Images/Page_1_Vertical.PNG)
 
+![image alt](https://github.com/Crystal14w/depth-parallax-engine/blob/4b1aa79fdd83dd0c6cab5cba43ec3e4bd23a6028/Images/Page_2_Vertical.PNG)
 
 ## Image Example
 
