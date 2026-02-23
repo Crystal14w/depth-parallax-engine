@@ -26,7 +26,7 @@ It is not affiliated with, endorsed by, or connected to any commercial products 
 ## Image Example
 
 ## 1.) 🏗 Architecture
-## 🏗️ Architecture
+<sup>
 ```text
 User -- upload img --> | React UI | -----------------------------> | FastAPI |
                        | backend  | ◀︎ MP4/GIF                    |
@@ -39,19 +39,7 @@ Layer stack
            Upload form → progress bar → preview + download link
 
 
-
-
-
-
-
-                       ┌────────────┐   POST /process   ┌────────────┐
-User  ── upload img ──►│ React UI   │───────────────────►│ FastAPI    │
-                       └────────────┘                   │  backend   │
-                            ▲  MP4/GIF ◄───────────────┘            
-                            └──── preview ───────────────────────────┘
-Layer	Stack	What happens
-Backend	FastAPI • PyTorch • OpenCV • scikit‑image	1) Estimate depth with MiDaS.2) Segment foreground via DeepLab V3.3) Refine mask with Canny → dilation.4) Stabilise around focal point.5) Render parallax frames & encode.
-Frontend	React • Vite • TypeScript • Tailwind	Upload form → progress indicator → HTML5 video / GIF preview + download link.
+</sup>
 
 ## 2.) 🚀 Quick Start
 
