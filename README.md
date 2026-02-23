@@ -13,7 +13,7 @@ This project demonstrates how monocular depth estimation can be used to generate
 * FastAPI backend
 * DeepLab V3 + Canny semantic & edge masks for crisp furniture outlines
 * Focal‑point stabilisation (focalX, focalY, 0‑100 %)
-* Exports MP4 (H.264, 24 fps) or GIF
+* Exports MP4 (H.264, 30 fps)
 
 ## Disclaimer
 
@@ -33,7 +33,7 @@ It is not affiliated with, endorsed by, or connected to any commercial products 
                        ┌────────────┐   POST /process   ┌────────────┐
 User  ── upload img ──►│ React UI   │───────────────────►│ FastAPI   │
                        └────────────┘                    ____________
-                            ▲  MP4/GIF ◄───────────────┘            
+                            ▲  MP4 ◄───────────────┘            
                             └──── preview ───────────────────────────┘
 Layer stack
   Backend  FastAPI • PyTorch • OpenCV • scikit-image
