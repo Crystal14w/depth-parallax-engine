@@ -43,8 +43,11 @@ Frontend	React • Vite • TypeScript • Tailwind	Upload form → progress ind
 git clone https://github.com/crystal14w/depth-parallax-engine.git
 cd depth-parallax-engine
 
-backend/   # FastAPI + ML
-client/    # React frontend
+backend/   
+# FastAPI + ML
+
+client/   
+# React frontend
 
 # 2 • Backend setup
 cd backend
