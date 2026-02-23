@@ -28,9 +28,11 @@ It is not affiliated with, endorsed by, or connected to any commercial products 
 ## 1.) 🏗 Architecture
 
 ```
-User -- upload img --> | React UI | -----------------------------> | FastAPI |
-                       | backend  | ◀︎ MP4/GIF                    |
-                       └─ preview ------------------------------▶ HTML5 player
+                       ┌────────────┐   POST /process   ┌────────────┐
+User  ── upload img ──►│ React UI   │───────────────────►│ FastAPI    │
+                       └────────────┘                   │  backend   │
+                            ▲  MP4/GIF ◄───────────────┘            
+                            └──── preview ───────────────────────────┘
 Layer stack
   Backend  FastAPI • PyTorch • OpenCV • scikit-image
            1) MiDaS depth  2) DeepLab V3 seg  3) Canny refine
