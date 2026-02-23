@@ -106,7 +106,7 @@ const res = await axios.post("http://127.0.0.1:8000/process", formData, {
 http://127.0.0.1:8000/result/ab12cd34?fmt=mp4
 
 ## 6.) 📦 Production build
-.\venv\Scripts\python.exe -m uvicorn server:app --reload --host 127.0.0.1 --port 8000
+.\venv\Scripts\python.exe -m uvicorn server:app --reload --host 127.0.0.1 --port 8000 <br>
 npm run build
 
 
