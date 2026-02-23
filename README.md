@@ -26,8 +26,8 @@ It is not affiliated with, endorsed by, or connected to any commercial products 
 ## Image Example
 
 ## 1.) 🏗 Architecture
-<sup>
-```text
+
+```
 User -- upload img --> | React UI | -----------------------------> | FastAPI |
                        | backend  | ◀︎ MP4/GIF                    |
                        └─ preview ------------------------------▶ HTML5 player
@@ -37,9 +37,8 @@ Layer stack
            4) Focal-point stabilise   5) Render & encode
   Frontend React • Vite • TypeScript • Tailwind
            Upload form → progress bar → preview + download link
+```
 
-
-</sup>
 
 ## 2.) 🚀 Quick Start
 
